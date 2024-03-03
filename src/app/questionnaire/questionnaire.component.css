@@ -1,0 +1,63 @@
+
+body{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */
+    background-position: center;
+    background-attachment: fixed; /* Pour que l'image reste fixe pendant le défilement */
+    font-family: Arial, sans-serif; 
+    margin-bottom: 0;
+   
+    margin-top: -100px;
+}
+
+
+form {
+  /* Positionner l'image au centre du formulaire */
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+
+/* Ajuster la largeur des éléments div pour occuper 50% de la largeur du formulaire */
+div {
+  /* Couleur de fond avec une opacité pour permettre à l'arrière-plan de l'image de transparaître */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px; 
+}
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style des options de réponse */
+  input[type="radio"] {
+    margin-right: 5px;
+    margin-top: 30px;
+   
+  }
+  
+  label {
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Style du bouton Soumettre */
+  button[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: hsl(190, 10%, 89%);
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    height: 60px;
+    margin-left: 600px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #5b6e81;
+  }
+  

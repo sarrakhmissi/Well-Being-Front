@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
+
+  background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */
+    background-position: center;
+    background-attachment: fixed; /* Pour que l'image reste fixe pendant le défilement */
+ 
+  }
+ 
+  footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #170c0c;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact, .social-media {
+    flex: 1;
+}
+
+.contact h3, .social-media h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.contact h5 {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media ul li:last-child {
+    margin-right: 0;
+}
+
+.social-media ul li a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Rounded corners for the social media icons */
+}
+ 
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  .search-bar {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+  }
+  
+  .search-bar button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background-color: #777;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #180808;
+  }
+  h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #cccccc;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #2d1010;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section.hero {
+    text-align: center;
+    padding: 50px 0;
+background-color: rgb(255,255,255,0.6); 
+max-width: 1200px; /* Définissez une largeur maximale pour la section */
+    margin: 0 auto;
+
+ }
+  
+  section.hero h1 {
+    font-size: 36px;
+  }
+  
+  section.hero p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  section.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 40px;
+  }
+  
+  section.featured-products .product {
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid #e3dddd;
+    padding: 10px;
+  }
+  
+  section.featured-products img {
+    width: 100%;
+    max-height: 300px;
+  }
+  
+  section.featured-products h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  section.featured-products p {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  section.featured-products a {
+    display: block;
+    margin-top: 20px;
+    background-color: #2fe232;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  section.promo-banner {
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  section.promo-banner img {
+    width: 100%;
+    max-height: 500px;
+  }
+  
+  section.promo-banner .promo-text {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+background-image: url('https://www.e-marketing.fr/Assets/Images/Breves/breve48079-0.JPG');  color: #fff;
+    padding: 20px;
+    background-size: cover;
+  }
+  
+  section.promo-banner h2 {
+    font-size: 30px;
+  }
+  
+  section.promo-banner p {
+    font-size: 18px;
+  }
+  
+  section.promo-banner a {
+    display: block;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    
+  }

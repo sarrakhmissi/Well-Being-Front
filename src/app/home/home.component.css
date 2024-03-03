@@ -1,0 +1,128 @@
+main {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */
+    background-position: center;
+    background-attachment: fixed; /* Pour que l'image reste fixe pendant le défilement */
+    font-family: Arial, sans-serif; 
+    margin-bottom: 0;
+   
+  
+}
+
+.title-container {
+    display: flex; /* Utilise flexbox */
+    align-items: center; /* Centre les éléments verticalement */
+    margin-left: 200px;
+}
+
+.small-text {
+    font-size: 30px; /* Réduit la taille du texte */
+    margin-right: 10px; /* Ajoute un espacement entre les deux phrases */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    
+
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 90px; /* Augmente la taille du texte */
+}
+
+h1 {
+    text-align: left;
+    font-size: 100px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+}
+
+h1::first-letter {
+    font-weight: bold;
+    color:#d996c8; /* Couleur de la première lettre */
+}
+h4::first-letter {
+    font-weight: bold;
+    color: #d996c8; /* Couleur de la première lettre */
+}
+h5{
+    text-align: center;
+}
+p::first-letter{
+    color: #d996c8;
+    font-weight: bold;
+    font-size: 60px;
+    font-weight: bold;
+}
+p{
+    font-size: 20px;
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    font-weight: bold;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: -80px; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact, .social-media {
+    flex: 1;
+}
+
+.contact h3, .social-media h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.contact h5 {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media ul li:last-child {
+    margin-right: 0;
+}
+
+.social-media ul li a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Rounded corners for the social media icons */
+}
+.get-started-btn {
+    background-color: #a3d7cf; /* Couleur de fond */
+    color: #000000; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    padding: 35px 45px; /* Ajoute du rembourrage */
+    font-size: 20px; /* Taille de la police */
+    border-radius: 40px; /* Arrondi les coins */
+    cursor: pointer; /* Affiche un curseur au survol */
+    transition: background-color 0.3s ease; /* Animation au survol */
+    margin-left: 400px;
+    margin-top: 30px;
+}
+.get-started-btn:hover{
+    background-color:#d996c8;
+}
+

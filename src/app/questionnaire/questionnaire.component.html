@@ -1,0 +1,32 @@
+<body>
+<main>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<form (ngSubmit)="submitForm()">
+
+  <div *ngFor="let question of questions">
+    <p><strong>{{ question.text }}</strong></p>
+    <label>
+      <input type="radio" name="{{ question.id }}" [(ngModel)]="question.answer" value="oui"><strong>oui</strong> 
+    </label>
+    <label>
+      <input type="radio" name="{{ question.id }}" [(ngModel)]="question.answer" value="non"><strong>non</strong> 
+    </label><br><br>
+<br><br>
+
+  </div>
+  
+</form>
+</main>
+<button type="button" (click)="submitForm()">Submit</button>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+</body>

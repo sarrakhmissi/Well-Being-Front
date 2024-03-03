@@ -1,0 +1,17 @@
+<body>
+  
+    <main>
+        <section class="special-offers">
+            <h1>Offres Spéciales Produits</h1>
+            <p>Profitez de ces offres spéciales pour acheter votre iPhone au meilleur prix. Ces offres sont limitées dans le temps, alors ne tardez pas à en profiter !</p>
+            <div  class="offer" *ngFor="let promotion of promotions">
+                <img [src]="promotion.imagepromotion"  />
+                <h2>{{promotion.name}} - Remise de {{promotion.discount}}</h2>
+                <p>Obtenez une réduction de {{promotion.discount}} sur {{promotion.name}}. Profitez de ses performances avancées, de son appareil photo de qualité professionnelle et de son design élégant à un prix incroyable.</p>
+                <p>start date : {{promotion.startdate}}</p>
+                <p>End date : {{promotion.enddate}}</p>
+                <h3>New price : {{promotion.newprice}}</h3>
+            </div>
+        </section>
+    </main>
+</body>

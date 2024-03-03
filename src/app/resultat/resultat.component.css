@@ -1,0 +1,52 @@
+/* Style des résultats */
+
+body{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */
+    background-position: center;
+    background-attachment: fixed; /* Pour que l'image reste fixe pendant le défilement */
+    font-family: Arial, sans-serif; 
+    margin-bottom: 0;
+   
+    margin-top: -100px;
+}
+
+h1 {
+    color: #000000; 
+
+    text-align:center;
+  }
+  
+  h3 {
+    color: #000000; /* Vert */
+    text-align:center;
+
+  }
+  
+  p {
+    color: #000000; /* Bleu */
+    
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    color: #000000; /* Vert */
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  /* Style pour les cas spécifiques */
+  div {
+    margin-top: 20px;
+  }
+  
+  /* Style du texte pour les résultats négatifs */
+  div:nth-child(3) p {
+    color: #dc3545; /* Rouge */
+
+  }
+  

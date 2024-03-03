@@ -1,0 +1,38 @@
+<body>
+
+
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <h1>Résultats ☺</h1>
+  <br><br>
+  <div *ngIf="yesAnswers.length > 0">
+    <h3>Hello, you have completed the Quiz 👏</h3>
+    <br><br>
+    <ul>
+      <li *ngFor="let answer of yesAnswers">
+        <strong>
+          &nbsp;&nbsp; ☺&nbsp;&nbsp;&nbsp;&nbsp;{{ answer.advice }}<br><br><br></strong>
+      </li>
+    </ul>
+  </div>
+  <br><br><br>
+  <div *ngIf="yesAnswers.length === 0">
+    <p>Your mental well-being is in a positive state, indicating a sense of emotional balance, psychological resilience,
+      and overall contentment with your thoughts, feelings, and life circumstances.</p>
+  </div>
+  <div *ngIf="yesAnswers.length >11">
+    <p>Your mental well-being is in a negativ</p>
+  </div>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br><br><br>
+  <br><br>
+  <br><br>
+  <br><br><br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+</body>
