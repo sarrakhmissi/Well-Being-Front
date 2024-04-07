@@ -1,32 +1,185 @@
 <body>
-<main>
+  <main>
 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-
-<form (ngSubmit)="submitForm()">
-
-  <div *ngFor="let question of questions">
-    <p><strong>{{ question.text }}</strong></p>
-    <label>
-      <input type="radio" name="{{ question.id }}" [(ngModel)]="question.answer" value="oui"><strong>oui</strong> 
-    </label>
-    <label>
-      <input type="radio" name="{{ question.id }}" [(ngModel)]="question.answer" value="non"><strong>non</strong> 
-    </label><br><br>
-<br><br>
-
-  </div>
+    <br><br>
+    <br><br><br>
+    <h1>Quiz</h1>
+    <br>
   
-</form>
-</main>
-<button type="button" (click)="submitForm()">Submit</button>
+    <form (ngSubmit)="submitForm()">
+  
+      <div *ngIf="currentQuestionIndex === 0">
+        <p>{{ questions[0].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[0].id }}" [(ngModel)]="questions[0].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[0].id }}" [(ngModel)]="questions[0].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
 
+      </div>
+  
+      <div *ngIf="currentQuestionIndex === 1">
+        <p>{{ questions[1].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[1].id }}" [(ngModel)]="questions[1].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[1].id }}" [(ngModel)]="questions[1].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+      <div *ngIf="currentQuestionIndex === 2">
+        <p>{{ questions[2].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[2].id }}" [(ngModel)]="questions[2].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[2].id }}" [(ngModel)]="questions[2].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+  
+      <div *ngIf="currentQuestionIndex === 3">
+        <p>{{ questions[3].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[3].id }}" [(ngModel)]="questions[3].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[3].id }}" [(ngModel)]="questions[3].answer" value="non">No
+
+       </label><br><br>
+       <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+      <div *ngIf="currentQuestionIndex === 4">
+        <p>{{ questions[4].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[4].id }}" [(ngModel)]="questions[4].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[4].id }}" [(ngModel)]="questions[4].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+  
+      <div *ngIf="currentQuestionIndex === 5">
+        <p>{{ questions[5].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[5].id }}" [(ngModel)]="questions[5].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[5].id }}" [(ngModel)]="questions[5].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+      <div *ngIf="currentQuestionIndex === 6">
+        <p>{{ questions[6].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[6].id }}" [(ngModel)]="questions[6].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[6].id }}" [(ngModel)]="questions[6].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+  
+      <div *ngIf="currentQuestionIndex === 7">
+        <p>{{ questions[7].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[7].id }}" [(ngModel)]="questions[7].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[7].id }}" [(ngModel)]="questions[7].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+      <div *ngIf="currentQuestionIndex === 8">
+        <p>{{ questions[8].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[8].id }}" [(ngModel)]="questions[8].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[8].id }}" [(ngModel)]="questions[8].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+  
+      <div *ngIf="currentQuestionIndex === 9">
+        <p>{{ questions[9].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[9].id }}" [(ngModel)]="questions[9].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[9].id }}" [(ngModel)]="questions[9].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+      <div *ngIf="currentQuestionIndex === 10">
+        <p>{{ questions[10].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[10].id }}" [(ngModel)]="questions[10].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[10].id }}" [(ngModel)]="questions[10].answer" value="non">No
+        </label><br><br>
+        <button type="button" (click)="nextQuestion()" class="next-button">Next</button>
+
+      </div>
+  
+      <div *ngIf="currentQuestionIndex === 11">
+        <p>{{ questions[11].text }}</p>
+        <label>
+          <input type="radio" name="{{ questions[11].id }}" [(ngModel)]="questions[11].answer" value="oui">Yes &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="{{ questions[11].id }}" [(ngModel)]="questions[11].answer" value="non">No
+        </label><br><br>
+        <br><br><br><br>
+        <button type="button" (click)="submitForm()" class="click-button">Submit</button>
+
+      </div>
+  
+      <!-- Add more div blocks for other questions as needed -->
+  
+  
+    </form>
+  
+  </main>
+  
 <br><br>
 <br><br>
 <br><br>
 <br><br>
 
 </body>
+<footer>
+  <div class="footer-container">
+      <div class="contact">
+          <h3>Contact</h3>
+          <h5>Email: contactexample.com</h5>
+          <h5>Téléphone: +123456789</h5>
+      </div>
+      <div class="social-media">
+          <h3>Suivez-nous</h3>
+          <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR"><img
+                          src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg"
+                          alt="Facebook"></a></li>
+              <li><a href="https://www.instagram.com/votrecompte"><img
+                          src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
+                          alt="Instagram"></a></li>
+          </ul>
+      </div>
+  </div>
+
+</footer>

@@ -1,0 +1,61 @@
+
+
+
+
+
+<!-- happiness-map.component.html -->
+
+<!-- Formulaire pour ajouter un nouveau moment -->
+<div>
+  <h2>Ajouter un nouveau moment</h2>
+  <form (ngSubmit)="addMoment()">
+    <div>
+      <label>Description:</label>
+      <input type="text" [(ngModel)]="newMoment.description" name="description" required placeholder="add positive moment">
+    </div>
+    <div>
+      <label>Date et heure:</label>
+      <input type="datetime-local" [(ngModel)]="newMoment.dateTime" name="dateTime" required>
+    </div>
+    <button type="submit">Ajouter</button>
+  </form>
+</div>
+
+<!-- Liste des moments ajoutés -->
+<div>
+  <h2>Moments ajoutés</h2>
+  <div *ngFor="let moment of moments">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ moment.description }}</h5>
+        <p class="card-text">Date: {{ moment.dateTime | date }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <footer>
+    <div class="footer-container">
+        <div class="contact">
+            <h3>Contact</h3>
+            <h5>Email: contactexample.com</h5>
+            <h5>Téléphone: +123456789</h5>
+        </div>
+        <div class="social-media">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR"><img
+                            src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg"
+                            alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/votrecompte"><img
+                            src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
+                            alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </div>
+
+</footer>

@@ -11,10 +11,17 @@ import { ResultatComponent } from './resultat/resultat.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StoreComponent } from './store/store.component';
-import { HappinessComponent } from './happiness/happiness.component';
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PromotionComponent } from './promotion/promotion.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { BresultatComponent } from './bresultat/bresultat.component';
+import { HealthComponent } from './health/health.component';
+import { HresultatComponent } from './hresultat/hresultat.component';
+import { HappinessMapComponent } from './happiness-map/happiness-map.component';
+import { PanierComponent } from './panier/panier.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 @NgModule({
@@ -26,9 +33,16 @@ import { PromotionComponent } from './promotion/promotion.component';
     QuestionnaireComponent,
     ResultatComponent,
     StoreComponent,
-    HappinessComponent,
     AddNewProductComponent,
-    PromotionComponent
+    PromotionComponent,
+    RegisterComponent,
+    LoginComponent,
+    BresultatComponent,
+    HealthComponent,
+    HresultatComponent,
+    HappinessMapComponent,
+    PanierComponent,
+    ProfilComponent,
    
   
    
@@ -38,6 +52,7 @@ import { PromotionComponent } from './promotion/promotion.component';
     AppRoutingModule,
     FormsModule,
     NgbModule,
+   
     HttpClientModule
    
   ],

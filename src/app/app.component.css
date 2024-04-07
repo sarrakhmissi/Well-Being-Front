@@ -6,13 +6,13 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
+    background-color: white;
     background-size: cover;
     /* Ajuster la taille de l'image pour couvrir tout le formulaire */
     background-position: center;
     background-attachment: fixed;
     /* Pour que l'image reste fixe pendant le défilement */
-    font-family: Arial, sans-serif;
+    font-family: zapf chancery, serif;
     margin-bottom: 0;
 
 
@@ -25,6 +25,7 @@ body {
     align-items: center;
     padding: 10px 30px;
     height: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
 }
 
 
@@ -38,7 +39,9 @@ body {
 .buttons {
     display: flex;
     align-items: center;
+
 }
+
 
 .buttons .btn {
     padding: 8px 16px;
@@ -46,24 +49,24 @@ body {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    color: #333;
+    color: #0fc0df;
     transition: background-color 0.3s ease;
+    background-color: transparent;
+    
 
 }
 
 .buttons .btn:hover {
-    background-color: #d996c8;
+    background-color: #e8edee;
 }
 
 .buttons .btn.left {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
-}
+background-color: rgb(255, 255, 255);}
 
 .dropdown .btn {
-    color: rgb(0, 0, 0);
+    color: #0fc0df;
     /* Changer la couleur du texte en blanc */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
-
+background-color: rgb(255, 255, 255);
 }
 
 .dropdown {

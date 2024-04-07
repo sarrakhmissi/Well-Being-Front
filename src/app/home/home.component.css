@@ -1,67 +1,92 @@
 main {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('https://ketabton.com/articles/image/1003?fbclid=IwAR3pkOkYuY4E8Uc-YRShi2bwX2rooglmE7KBbDShE4Nu5iolImpcFzaZd9I');
     background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */
     background-position: center;
     background-attachment: fixed; /* Pour que l'image reste fixe pendant le défilement */
     font-family: Arial, sans-serif; 
     margin-bottom: 0;
-   
+   margin-top: 40px;
   
 }
 
 .title-container {
     display: flex; /* Utilise flexbox */
     align-items: center; /* Centre les éléments verticalement */
-    margin-left: 200px;
+    margin-left: 100px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+
+   
 }
+
 
 .small-text {
     font-size: 30px; /* Réduit la taille du texte */
     margin-right: 10px; /* Ajoute un espacement entre les deux phrases */
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+    color: #0fc0df; /* Couleur du texte blanc */
+   
+    
     
 
 }
+.comment-section {
+    border: 2px solid #ccc; /* Add your desired border properties here */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    margin-top: 20px; /* Optional: Adjust margin for spacing */
+}
+
+
+.top-right-image {
+    width: 600px; /* Largeur de l'image */
+  
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    float: right;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+.deals{
+    width: 740px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    float: right;
+   
+}
 
 .big-text {
-    font-weight: bold;
-    font-size: 90px; /* Augmente la taille du texte */
+    
+    font-size: 70px; /* Augmente la taille du texte */
 }
 
 h1 {
     text-align: left;
     font-size: 100px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+    color: #0fc0df; /* Couleur du texte blanc */
+    
+                  font-family: zapf chancery, serif;
+   
 }
 h2{
     text-align: center;
+    color: #0fc0df;
 }
 
-h1::first-letter {
-    font-weight: bold;
-    color:#d996c8; /* Couleur de la première lettre */
-}
-h4::first-letter {
-    font-weight: bold;
-    color: #d996c8; /* Couleur de la première lettre */
-}
+
 h5{
     text-align: center;
 }
 p::first-letter{
-    color: #d996c8;
+    color: #0fc0df;
     font-weight: bold;
-    font-size: 60px;
-    font-weight: bold;
+    
+    font-family: zapf chancery, serif;
 }
 p{
-    font-size: 20px;
-    margin-left: 30px;
-    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-left: 100px;
+    color: #0fc0df; /* Couleur du texte blanc */
+    
     margin-top: 10px;
-    font-weight: bold;
+    margin-bottom: 1px;
+    font-family: zapf chancery, serif;
+  
 }
 footer {
     background-color: #333;
@@ -110,19 +135,102 @@ footer {
     height: 40px;
     border-radius: 50%; /* Rounded corners for the social media icons */
 }
-.get-started-btn {
-    background-color: #a3d7cf; /* Couleur de fond */
-    color: #000000; /* Couleur du texte */
-    border: none; /* Supprime la bordure */
-    padding: 35px 45px; /* Ajoute du rembourrage */
+
+.btn:hover{
+    background-color:#0fc0df;
+    color: #ffffff;
+}
+.blue-hr {
+    border: none; /* Supprimer la bordure par défaut */
+    border-top: 3px solid #0fc0df; /* Ajouter une bordure supérieure bleue */
+    margin: 20px ; /* Marge en haut et en bas pour l'espace */
+    width: 30%;
+    margin-left: 500px;
+}
+
+.photo-with-paragraph {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Alignement vertical des éléments */
+    margin-bottom: 20px; /* Espacement entre chaque paire image/texte */
+
+}
+
+.photo-with-paragraph img {
+    max-width: 50%; /* Largeur maximale de l'image pour occuper la moitié de la largeur */
+    margin-left: 30px; /* Espacement entre l'image et le texte */
+    width: 400px;
+}
+h5{
+    font-size: 15px;
+}
+h4{
+    margin-left: 100px;
+    font-family: zapf chancery, serif;
+}
+/* Style pour l'image */
+.comment-img {
+    width: 50px; /* Largeur de l'image */
+    height: 50px; /* Hauteur de l'image */
+    border-radius: 50%; /* Pour un style arrondi */
+    margin-right: 10px; /* Marge à droite de l'image pour l'espacement */
+  }
+
+ .btn {
+    color: #0fc0df; /* Couleur du texte */
+    border: 2px solid #0fc0df; 
+    padding: 15px 25px; /* Ajoute du rembourrage - réduit la hauteur */
     font-size: 20px; /* Taille de la police */
     border-radius: 40px; /* Arrondi les coins */
     cursor: pointer; /* Affiche un curseur au survol */
     transition: background-color 0.3s ease; /* Animation au survol */
     margin-left: 400px;
-    margin-top: 30px;
-}
-.get-started-btn:hover{
-    background-color:#d996c8;
-}
+    margin-top: 150px;
+    
 
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  width: 300px; /* Définissez la largeur souhaitée */
+  height: 30px; /* Définissez la hauteur souhaitée */
+  border-width: 1px; /* Épaisseur de la bordure */
+}
+.custom-button {
+    background-color: #ffffff; /* Couleur de fond */
+    color: #0fc0df; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur pointeur au survol */
+    text-decoration: underline; /* Souligner le texte */
+
+  }
+  
+  .custom-button:hover {
+    background-color: #0fc0df; /* Couleur de fond au survol */
+    color: white;
+  }
+  
+
+/* Style for the delete button */
+.delete-button {
+    background-color: #ffffff; /* Coral color */
+    color: #ff1100; /* White text color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: underline; /* Souligner le texte */
+
+  }
+  
+  /* Hover effect for the delete button */
+  .delete-button:hover {
+    background-color: #ff1100; /* Darker coral color on hover */
+    color: white;
+  }

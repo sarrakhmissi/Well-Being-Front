@@ -1,0 +1,19 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" [(ngModel)]="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Enter your password" required>
+        </div>
+        <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div> <!-- Ajout de la zone pour afficher le message d'erreur -->
+        <button type="submit">Login</button>
+    </form>
+    <div class="register-link">
+        Don't have an account? <a href="register">Register</a>
+    </div>
+  </div>
+  

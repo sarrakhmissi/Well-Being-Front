@@ -10,18 +10,26 @@ import { Promotion } from '../models/promotion';
   templateUrl: './add-new-product.component.html',
   styleUrls: ['./add-new-product.component.css']
 })
+
+
 export class AddNewProductComponent implements OnInit {
+
+
   constructor(private productservice: ProductService) {}
+
 
   product: any = {};
   products: Product[] = [];
   promotion: any ={};
   promotions:Promotion [] = [];
 
+
   ngOnInit(): void {
     this.getProduct();
+    this.getPromotions();
 
   }
+
 
   getProduct(): void {
     this.productservice.getProducts().subscribe(
@@ -41,10 +49,6 @@ export class AddNewProductComponent implements OnInit {
   }
 
 
-
-
-
-
   addProduct(addForm: NgForm) {
     this.productservice.addproduct(this.product).subscribe(
       (response: any) => {
@@ -55,6 +59,7 @@ export class AddNewProductComponent implements OnInit {
       }
     );
   }
+
 
   deleteProduct(id: number): void {
     this.productservice.deleteProduct(id).subscribe(() => {

@@ -1,16 +1,13 @@
-// resultat.component.ts
 import { Component, OnInit } from '@angular/core';
 import { QuestionnaireService } from '../questionnaire.service';
-import { Question } from '../models/question.model';
+import { Bquestion } from '../models/bquestion.model';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-resultat',
   templateUrl: './resultat.component.html',
   styleUrls: ['./resultat.component.css']
 })
-export class ResultatComponent implements OnInit {
- 
+export class ResultatComponent implements OnInit{
   yesAnswers: any[] = [];
   
 
@@ -26,12 +23,11 @@ export class ResultatComponent implements OnInit {
     
   }
 
-  getCustomMessage(question: Question): string {
-    if (question.answer === true) {
-      return `Pour la question ${question.id}, vous avez répondu Oui, ce qui signifie que votre conseil est ${question.advice}`;
+  getCustomMessage(bquestion: Bquestion): string {
+    if (bquestion.answer === true) {
+      return `Pour la question ${bquestion.id}, vous avez répondu Oui, ce qui signifie que votre conseil est ${bquestion.advice}`;
     } else {
-      return `Pour la question ${question.id}, vous avez répondu Non.`;
+      return `Pour la question ${bquestion.id}, vous avez répondu Non.`;
     }
   }
-  
 }

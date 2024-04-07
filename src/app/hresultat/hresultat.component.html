@@ -1,0 +1,58 @@
+<body>
+
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <h1>Résultats ☺</h1>
+    <br><br>
+    <div *ngIf="yesAnswers.length > 0">
+      <h3>Hello, you have completed the Quiz 👏</h3>
+      <br><br>
+      <ul>
+        <li *ngFor="let answer of yesAnswers">
+          <strong>
+            &nbsp;&nbsp; ☺&nbsp;&nbsp;&nbsp;&nbsp;{{ answer.advice }}<br><br><br></strong>
+        </li>
+      </ul>
+    </div>
+    <br><br><br>
+    <div *ngIf="yesAnswers.length === 0">
+      <p>Health</p>
+    </div>
+    <div *ngIf="yesAnswers.length >11">
+      <p>Your mental well-being is in a negativ</p>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br><br><br>
+    <br><br>
+    <br><br>
+    <br><br><br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+  </body>
+  <footer>
+    <div class="footer-container">
+        <div class="contact">
+            <h3>Contact</h3>
+            <h5>Email: contactexample.com</h5>
+            <h5>Téléphone: +123456789</h5>
+        </div>
+        <div class="social-media">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR"><img
+                            src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg"
+                            alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/votrecompte"><img
+                            src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
+                            alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
