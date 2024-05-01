@@ -14,6 +14,9 @@
         <li *ngFor="let answer of yesAnswers">
           <strong>
             &nbsp;&nbsp; ☺&nbsp;&nbsp;&nbsp;&nbsp;{{ answer.advice }}<br><br><br></strong>
+            <a href="store" >
+              <img [src]="answer.beautyImage" style="width: 300px; height: auto;">
+            </a>
         </li>
       </ul>
     </div>

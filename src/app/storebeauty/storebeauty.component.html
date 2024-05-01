@@ -1,0 +1,134 @@
+<body>
+
+    <main>
+      <div class="footer-container">
+        <div class="contact">
+          <h3> ☎ +216 33 33 33 33 &nbsp;&nbsp;&nbsp; &nbsp; ✉ wellbeing@gmail.com </h3>
+  
+          <div class="social-media">
+            <h3></h3>
+            <ul>
+              Follow us &nbsp;&nbsp;&nbsp;&nbsp;<a
+                href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR">
+                <img src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg" alt="Facebook"
+                  style="width: 50px; height: 50px;">
+              </a>
+  
+  
+              <a href="https://www.instagram.com/votrecompte">
+                <img
+                  src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
+                  alt="Intagram" style="width: 50px; height: 50px;">
+              </a>
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  
+  
+              <a>
+  
+  
+  
+  
+                <ul class="cart">
+                  <li class="cart-item" *ngFor="let item of items; let i = index">
+                    {{ item.name }} : {{ item.price }} DT |
+                    <button class="remove-button" (click)="supprimerProduitsDuPanier(i)">
+                      <h3>—</h3>
+                    </button>
+                  </li>
+                </ul>
+                <div *ngIf="items.length === 0" class="empty-cart-message">
+                  Your cart is empty.
+                </div>
+                Total : <span class="cart-total">{{ calculerTotal() }} DT</span>
+                <button class="clear-cart-button" (click)="viderPanier()">Clear Cart</button>
+  
+  
+  
+  
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC_Oy3WGKKIf3MnnEugk43GN0wT5paNsDbvQ&usqp=CAU"
+                  alt="panier" style="width: 50px; height: 50px;">
+              </a>
+  
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    </main>
+  
+    <main>
+      <section class="hero">
+        <h1>🌟 Limited Time Offer: Get Your Favorites Now! 🌟<br></h1>
+  
+        🎉 Don't miss out on our exclusive promotion! For a limited time only, grab incredible discounts on a wide range
+        of products. <br>
+  
+        🛍️ Explore our store today and enjoy:<br>
+  
+        <h4>🔥 Up to 50% off select items!<br></h4>
+        🎁 Special deals on bestselling products!<br>
+  
+  
+        Hurry, these offers won't last forever!<br><br><br>
+        <section class="promo-banner">
+  
+          <div class="promo-text">
+  
+  
+  
+            <a href="promotion">See all offers</a>
+          </div>
+  
+        </section>
+        <br><br><br><br>
+  
+        <h1>Happy shopping! 🛒✨</h1> <br>
+        <div class="search"><input type="text" [(ngModel)]="searchTerm" placeholder="Search products by name" (keyup.enter)="searchProducts()">
+          <button (click)="searchProducts()">Search</button>
+          </div>
+       
+      </section>
+  
+  
+      <h2 >Beauty products</h2>
+      <section class="featured-products">
+        <div class="product" *ngFor="let beautyproduct of beautyproducts">
+          <img [src]="beautyproduct.imageUrl" alt="{{ beautyproduct.name }} " />
+          <h2>{{ beautyproduct.name }}</h2>
+          <p>Prix: {{ beautyproduct.price }} TND</p>
+  
+          <button (click)="ajouterProduitAuPanier(beautyproduct)" >Ajouter au panier</button>
+  
+        </div>
+      </section>
+      
+  
+    </main>
+  
+  </body>
+  <footer>
+    <div class="footer-container">
+      <div class="contact">
+        <h3>Contact</h3>
+        <h5>Email: contactexample.com</h5>
+        <h5>Téléphone: +123456789</h5>
+      </div>
+      <div class="social-media">
+        <h3>Suivez-nous</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR"><img
+                src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg" alt="Facebook"></a></li>
+          <li><a href="https://www.instagram.com/votrecompte"><img
+                src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
+                alt="Instagram"></a></li>
+        </ul>
+      </div>
+    </div>
+  
+  </footer>

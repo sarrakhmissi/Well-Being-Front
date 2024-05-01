@@ -1,0 +1,101 @@
+<div class="category mental-health">
+    <h2>Reservation </h2>
+</div>
+<div class="bordure">
+    <div class="border">
+
+        <div class="profil">
+            <div class="row">
+                <div class="col col-2">
+                    <img src="https://c8.alamy.com/compfr/2jmbhmf/femme-plat-personnage-medecin-travailleur-medecins-de-sante-illustration-vectorielle-personnes-personnage-de-profil-d-avatar-de-dessin-anime-femme-a-moitie-corps-avec-stethoscop-2jmbhmf.jpg"
+                        alt="Photo du médecin" class="photo">
+                </div>
+                <div class="col col-6">
+                    <div class="name">DR John Doe</div>
+                    <div class="specialist">Spécialiste en <strong> médecine générale</strong></div>
+                    <div class="support">Support pour: <strong>Médecine générale, Consultations, Examens</strong></div>
+                    <div class="former">Ancien résident à <strong>l'Institut National de Médecine</strong></div>
+                    <div class="price">Prix de la téléconsultation: <strong>$60</strong></div>
+                </div>
+                <div class="col col-3">
+                    <p style="color:#0c606e ;">Availability slots (timetable of the doctor's country)</p>
+                    <button (click)="openModal()" class="horaire-btn"> THE. 14 avril 2024 - 9h00</button>
+                    <button (click)="openModal()" class="horaire-btn"> WED. 15 april 2024 - 9h30</button>
+                    <button (click)="openModal()" class="horaire-btn"> SAT. 16 april 2024 - 9h00</button>
+                    <button (click)="openModal()" class="horaire-btn"> SUN. 17 april 2024 - 10h00</button>
+                    <button (click)="openModal()" class="horaire-btn"> SUN. 17 april 2024 - 14h00</button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        
+
+        <div class="modal-overlay" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}" (click)="closeModal()"></div>
+        <div class="modal" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}">
+            
+                <div class="bordure-2">
+                    <div class="container-2">
+                       
+                    
+                        <div class="form-container-2 .original-box-shadow">
+                            <form >
+                                <h2 style="color: rgb(20, 20, 27);">Reserve a meeting with a doctor</h2><br>
+                                <div class="form-group-2">
+                                  <label for="firstname">First Name:</label>
+                                  <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+                                </div>
+                            
+                                <div class="form-group-2">
+                                  <label for="lastname">Last Name:</label>
+                                  <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+                                </div>
+                            
+                                
+                            
+                               
+                             
+                                <div class="form-group-2">
+                                  <label for="dob">Date of Birth:</label>
+                                  <input type="date" id="dob" name="dob" placeholder="Select your date of birth" required>
+                                </div>
+                            
+                                <div class="form-group-2">
+                                  <label for="phone">Phone:</label>
+                                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                            
+                                <div class="form-group-2">
+                                  <label for="gender">Gender:</label>
+                                  <select id="gender" name="gender" required>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                  </select>
+                                </div>
+                            
+                               
+                            
+                                <button type="submit" (click)="closeModal()">Reserve</button>
+                               
+                              
+                               
+                              </form>
+                        </div>
+                       
+                      
+                      </div>
+                      
+                      </div>
+                
+            
+        </div>

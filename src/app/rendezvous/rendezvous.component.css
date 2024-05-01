@@ -1,0 +1,171 @@
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .category {
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    padding: 15px;
+    border: 2px solid #0fc0df;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #0fc0df;
+  }
+  h2{
+    color:white
+  }
+  .horaire-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #e3e3e3;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .horaire-btn:hover {
+    background-color: #7d7f80;
+  }
+  .bordure {
+    border-top: 60px solid #000; /* couleur et hauteur de la bordure */
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+    padding: 25px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* ombre de bordure */
+margin-top: 40px;
+margin-left: 80px;
+  }
+  
+  .border {
+    border: 30px solid #5e0d0d; /* bordure de 2 pixels avec une couleur noire */
+    padding: 20px; /* espacement intérieur de la bordure */
+    margin: 20px; /* espacement extérieur de la bordure */
+  }
+  .photo {
+    width: 100px; /* taille de l'image */
+    height: 100px; /* hauteur de l'image */
+    border-radius: 50%; /* rendre l'image ronde */
+    margin-right: 20px; /* espacement à droite de l'image */
+  }
+  
+  .profil {
+    padding: 10px; /* espacement à l'intérieur de la bordure */
+  }
+  
+  .name {
+    font-size: 24px; /* taille de la police du nom */
+    font-weight: bold; /* poids de la police du nom */
+  }
+  
+  .specialist, .support, .former, .price, .availability {
+    margin-top: 5px; /* espacement entre les lignes */
+  }
+  /* Styles pour le modal */
+ 
+  
+  .modal {
+    position: flex;
+    width: 800px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 20px;
+    z-index: 9999; /* Ensure modal is on top of other content */
+    border-radius: 5px;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensure modal overlay is above other content */
+    display: none; /* Initially hidden */
+  }
+  
+  
+  
+
+  
+
+  
+  .image-2 {
+    flex: 0 0 30%; /* Taille de l'image */
+    margin-right: 250px; /* Espacement entre l'image et le formulaire */
+  }
+  
+  .form-container-2 {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:grey ;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
+    flex: 0 0 70%; /* Taille du formulaire */
+  }
+
+  
+  .photo-2 {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.6;
+   
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    text-align: left;
+  }
+  
+  .form-group-2 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 30%;
+    margin-right: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  select,
+  input[type="number"] {
+    width: 65%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+

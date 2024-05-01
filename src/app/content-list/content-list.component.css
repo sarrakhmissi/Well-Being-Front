@@ -1,0 +1,151 @@
+/* Style pour la liste de vidéos */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .category {
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    padding: 15px;
+    border: 2px solid #0fc0df;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #0fc0df;
+    color: white;
+  }
+  
+  /* Style pour chaque élément vidéo */
+  li {
+    margin-bottom: 20px;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 70%; 
+    margin-left: auto;
+  margin-right: auto;
+  }
+  
+  /* Style pour le titre de la vidéo */
+  h3 {
+    margin-top: 0;
+  }
+  
+  /* Style pour la vidéo */
+  video {
+    width: 60%;
+    border-radius: 4px;
+  }
+  
+  /* Style pour la description de la vidéo */
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 210px; 
+  }
+  main {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .calendar {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Affiche 7 jours par ligne */
+    gap: 10px;
+  }
+  
+  .date {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .available {
+    background-color: #c0ffc0; /* Couleur pour les dates disponibles */
+  }
+  
+  .unavailable {
+    background-color: #ffc0c0; /* Couleur pour les dates non disponibles */
+  }
+  
+  .date:hover {
+    background-color: #f0f0f0; /* Couleur au survol */
+  }
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  main .col {
+    width: 48%; /* Changer la largeur selon vos préférences */
+  }
+  
+  main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  main p {
+    margin-bottom: 10px;
+  }
+  
+  main ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  main li {
+    margin-bottom: 20px;
+  }
+  
+  main video {
+    width: 100%;
+    display: block;
+  }
+  
+  main .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  main .col.col-8 {
+    width: 66.66%; /* 8 colonnes sur 12 */
+  }
+  
+  main .col.col-4 {
+    width: 33.33%; /* 4 colonnes sur 12 */
+  }
+  
+  main select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  main button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  main button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

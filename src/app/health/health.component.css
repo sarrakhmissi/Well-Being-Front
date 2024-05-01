@@ -63,14 +63,31 @@ div {
     background-color:#ffffff;
     color: #0fc0df;
     border: 2px solid #0fc0df; 
+    transition: 1s;
+
+    animation: blinkAnimation 2s infinite; /* Utilisation de l'animation blinkAnimation avec une durée de 2 secondes, en boucle */
+}
+
+@keyframes blinkAnimation {
+  0% {
+    opacity: 1; /* Opacité initiale du bouton (entièrement visible) */
   }
+  50% {
+    opacity: 0.8; /* Opacité réduite  (bouton invisible) */
+    background-color:#0fc0df;
+    color: #fff;
+  }
+  100% {
+    opacity: 1; /* Opacité restaurée à 1 (bouton à nouveau visible) */
+  }
+}
  
   
   .next-button:hover {
     background-color:#0fc0df;
     color: #ffffff;
     border: none; 
-
+scale: 1.2;
   }
   .click-button{
     
@@ -91,10 +108,46 @@ div {
     border: none; 
 
   }
+  img {
+    width:100%; /* Assure que les images remplissent entièrement leur conteneur */
+    height: auto; /* Permet de conserver les proportions de l'image */
+    
+    display: block; /* Permet de centrer l'image horizontalement dans son conteneur */
+    margin-bottom: 10px; /* Ajoute un espace en bas de l'image */
+   
+    animation: zoom 2s ease-in-out infinite alternate; /* Ajoute l'animation de zoom */
+  }
+  
+  /* Définition de l'animation de zoom */
+  @keyframes zoom {
+    0% {
+      transform: scale(1); /* Pas de zoom initial */
+    }
+    100% {
+      transform: scale(1.1); /* Zoom à 110% à la fin de l'animation */
+    }
+  }
+  .Image{
+
+  height: auto;
+  clip-path: inset(0px 0px 45px 0px); /* Rognage de 20 pixels en bas seulement */
+  margin-left: 50px;
+  width: 400px;
+  height: 400px;
+  }
+  .right-image{
+    clip-path: inset(0px 50px 0px 100px); /* Rognage de 20 pixels en bas seulement */
+
+  }
+  .image-vector{
+    width: 400px;
+    height: 400px;
+  }
+ 
   footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     margin-top: -80px; 
 }

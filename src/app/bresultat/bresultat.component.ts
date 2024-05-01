@@ -25,7 +25,7 @@ export class BresultatComponent implements OnInit{
 
   getCustomMessage(bquestion: Bquestion): string {
     if (bquestion.answer === true) {
-      return `Pour la question ${bquestion.id}, vous avez répondu Oui, ce qui signifie que votre conseil est ${bquestion.advice}`;
+      return `Pour la question ${bquestion.id}, vous avez répondu Oui, ce qui signifie que votre conseil est ${bquestion.advice},${bquestion.beautyImage}`;
     } else {
       return `Pour la question ${bquestion.id}, vous avez répondu Non.`;
     }

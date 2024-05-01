@@ -19,9 +19,16 @@ import { LoginComponent } from './login/login.component';
 import { BresultatComponent } from './bresultat/bresultat.component';
 import { HealthComponent } from './health/health.component';
 import { HresultatComponent } from './hresultat/hresultat.component';
-import { HappinessMapComponent } from './happiness-map/happiness-map.component';
 import { PanierComponent } from './panier/panier.component';
 import { ProfilComponent } from './profil/profil.component';
+import { AddContentComponent } from './add-content/add-content.component';
+import { ContentListComponent } from './content-list/content-list.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { StorehealthComponent } from './storehealth/storehealth.component';
+import { StorebeautyComponent } from './storebeauty/storebeauty.component';
+import { AccccComponent } from './acccc/acccc.component';
+import { RendezvousComponent } from './rendezvous/rendezvous.component';
+import { ReservedComponent } from './reserved/reserved.component';
 
 
 @NgModule({
@@ -40,9 +47,16 @@ import { ProfilComponent } from './profil/profil.component';
     BresultatComponent,
     HealthComponent,
     HresultatComponent,
-    HappinessMapComponent,
     PanierComponent,
     ProfilComponent,
+    AddContentComponent,
+    ContentListComponent,
+    SidebarComponent,
+    StorehealthComponent,
+    StorebeautyComponent,
+    AccccComponent,
+    RendezvousComponent,
+    ReservedComponent,
    
   
    

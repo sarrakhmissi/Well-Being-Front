@@ -1,3 +1,43 @@
+.mental{
+
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    padding: 15px;
+    border: 2px solid #0fc0df;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #0fc0df;
+ 
+}
+.categories-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category {
+  width: 30%; /* Ajustez la largeur selon vos besoins */
+  padding: 50px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.category p {
+  margin-bottom: 10px;
+}
+
+.health {
+  background-color: #ffcccc; /* Couleur de fond pour la catégorie Health */
+}
+
+.mental-health {
+  background-color: #ccffcc; /* Couleur de fond pour la catégorie Mental Health */
+}
+
+.beauty {
+  background-color: #ccccff; /* Couleur de fond pour la catégorie Beauty */
+}
+
+
 main {
     background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */
     background-position: center;
@@ -14,15 +54,21 @@ main {
     margin-left: 100px;
     margin-top: 40px;
     font-family: 'Montserrat', sans-serif;
+      
+  }
 
+
+
+
+  .big-text {
+    
+    font-size: 100px; /* Augmente la taille du texte */
    
-}
-
-
+  }
 .small-text {
     font-size: 30px; /* Réduit la taille du texte */
     margin-right: 10px; /* Ajoute un espacement entre les deux phrases */
-    color: #0fc0df; /* Couleur du texte blanc */
+    color: #000000; /* Couleur du texte blanc */
    
     
     
@@ -35,14 +81,8 @@ main {
 }
 
 
-.top-right-image {
-    width: 600px; /* Largeur de l'image */
-  
-    height: auto; /* Hauteur automatique pour conserver les proportions */
-    float: right;
-    margin-right: 100px;
-    margin-top: 100px;
-}
+
+
 .deals{
     width: 740px; /* Largeur de l'image */
     height: auto; /* Hauteur automatique pour conserver les proportions */
@@ -50,10 +90,7 @@ main {
    
 }
 
-.big-text {
-    
-    font-size: 70px; /* Augmente la taille du texte */
-}
+
 
 h1 {
     text-align: left;
@@ -72,22 +109,17 @@ h2{
 h5{
     text-align: center;
 }
-p::first-letter{
-    color: #0fc0df;
-    font-weight: bold;
-    
-    font-family: zapf chancery, serif;
-}
+
 p{
     font-size: 15px;
     margin-left: 100px;
-    color: #0fc0df; /* Couleur du texte blanc */
+    color: #000000; /* Couleur du texte blanc */
     
     margin-top: 10px;
     margin-bottom: 1px;
     font-family: zapf chancery, serif;
   
-}
+  }
 footer {
     background-color: #333;
     color: #fff;
@@ -136,10 +168,7 @@ footer {
     border-radius: 50%; /* Rounded corners for the social media icons */
 }
 
-.btn:hover{
-    background-color:#0fc0df;
-    color: #ffffff;
-}
+
 .blue-hr {
     border: none; /* Supprimer la bordure par défaut */
     border-top: 3px solid #0fc0df; /* Ajouter une bordure supérieure bleue */
@@ -174,9 +203,28 @@ h4{
     border-radius: 50%; /* Pour un style arrondi */
     margin-right: 10px; /* Marge à droite de l'image pour l'espacement */
   }
+  .top-right-image {
+    width: 600px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    float: right;
+    margin-right: 100px;
+    margin-top: 100px;
+    animation: scaleRotateAnimation 1s  alternate; /* Utilisation de l'animation scaleRotateAnimation avec une durée de 1 seconde, en boucle et en alternance */
+}
+
+@keyframes scaleRotateAnimation {
+  0% {
+    transform: scale(1) rotate(0deg); /* Taille et rotation initiales de l'image */
+  }
+  100% {
+    transform: scale(1.1) rotate(360deg); /* Taille agrandie à 110% avec une rotation complète de 360 degrés */
+  }
+}
+
 
  .btn {
-    color: #0fc0df; /* Couleur du texte */
+    color: #ffffff; /* Couleur du texte */
+    background-color:#0fc0df;
     border: 2px solid #0fc0df; 
     padding: 15px 25px; /* Ajoute du rembourrage - réduit la hauteur */
     font-size: 20px; /* Taille de la police */
@@ -185,7 +233,27 @@ h4{
     transition: background-color 0.3s ease; /* Animation au survol */
     margin-left: 400px;
     margin-top: 150px;
-    
+    transition: 1s;
+    animation: blinkAnimation 2s infinite; /* Utilisation de l'animation blinkAnimation avec une durée de 2 secondes, en boucle */
+}
+
+@keyframes blinkAnimation {
+  0% {
+    opacity: 1; /* Opacité initiale du bouton (entièrement visible) */
+  }
+  50% {
+    opacity: 0.8; /* Opacité réduite  (bouton invisible) */
+    background-color: rgb(255, 255, 255);
+    color: #0fc0df;
+  }
+  100% {
+    opacity: 1; /* Opacité restaurée à 1 (bouton à nouveau visible) */
+  }
+}
+.btn:hover{
+     
+    color: #ffffff;
+    scale: 1.2;
 
 }
 input[type="text"],
@@ -234,3 +302,4 @@ textarea {
     background-color: #ff1100; /* Darker coral color on hover */
     color: white;
   }
+  

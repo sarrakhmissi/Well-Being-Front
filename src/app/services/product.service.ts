@@ -7,6 +7,9 @@ import { Promotion } from '../models/promotion';
   providedIn: 'root'
 })
 export class ProductService {
+  searchProductsByName(searchTerm: string) {
+    throw new Error('Method not implemented.');
+  }
 
   readonly API_URL ="http://localhost:8080"
   readonly ENDPOINT_PRODUCTS ="/api/product/all"
@@ -60,5 +63,8 @@ viderPanier() {
 getItems() {
   return this.items;
 }
+
+
+
 
 }

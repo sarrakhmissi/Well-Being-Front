@@ -1,0 +1,29 @@
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .category {
+    width: 30%; /* Ajustez la largeur selon vos besoins */
+    padding: 100px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .category h2 {
+    margin-bottom: 10px;
+  }
+  
+  .health {
+    background-color: #ffcccc; /* Couleur de fond pour la catégorie Health */
+  }
+  
+  .mental-health {
+    background-color: #ccffcc; /* Couleur de fond pour la catégorie Mental Health */
+  }
+  
+  .beauty {
+    background-color: #ccccff; /* Couleur de fond pour la catégorie Beauty */
+  }
+  
