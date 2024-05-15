@@ -1,3 +1,43 @@
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="#"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438115829_1145633666473696_1716989493358583312_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DYyMpj3RQswQ7kNvgGJ_bBk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QH5kawcjNbDbtSFYQrfXtvCelx9r2L1AF4y56Z2rRE3mQ&oe=66699B3C" alt="Logo"></a>
+  </div>
+  <div>
+      
+  </div>
+  <div class="buttons left">
+      <a href="home" class="btn">Home</a>
+      <div class="dropdown" >
+          <button class="btn" >Quiz</button>
+          <div class="dropdown-content">
+              <a href="health" class="btn">Health</a>
+              <a href="mental" class="btn">Mental Health</a>
+              <a href="beauty" class="btn">Beauty</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="btn">Shop</button>
+          <div class="dropdown-content">
+              <a href="healthstore" class="btn">Health</a>
+              <a href="storemental" class="btn">Mental Health</a>
+              <a href="storebeauty" class="btn">Beauty</a>
+              <a href="promotion" class="btn">Promotion</a>
+
+          </div>
+      </div>
+      <a href="tips" class="btn">Tips for better lifestyle </a>
+      <a href="rendezvous" class="btn">Find a Doctor </a>
+      <a href="about" class="btn">About us</a>
+
+  </div>
+  
+  <div class="buttons right">
+      <a href="login" class="btn">Sign In</a>
+      <a href="register" class="btn">Sign Up</a>
+  </div>
+  
+</nav>
 <body>
   <main>
 
@@ -145,11 +185,10 @@
           <input type="radio" name="{{ questions[11].id }}" [(ngModel)]="questions[11].answer" value="non">No
         </label><br><br>
         <br><br><br><br>
-        <button type="button" (click)="submitForm()" class="click-button">Submit</button>
+        <button type="button" (click)="submitForm()" class="click-button">Click for result</button>
 
       </div>
   
-      <!-- Add more div blocks for other questions as needed -->
   
   
     </form>

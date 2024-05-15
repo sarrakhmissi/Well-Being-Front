@@ -17,36 +17,36 @@ import { ProfilComponent } from './profil/profil.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { AddContentComponent } from './add-content/add-content.component';
 import { Path } from 'leaflet';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { StorebeautyComponent } from './storebeauty/storebeauty.component';
 import { StorehealthComponent } from './storehealth/storehealth.component';
-import { AccccComponent } from './acccc/acccc.component';
 import { RendezvousComponent } from './rendezvous/rendezvous.component';
 import { ReservedComponent } from './reserved/reserved.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path : 'resultat', component: ResultatComponent},
   {path : 'bresultat', component: BresultatComponent},
   {path : 'panier', component: PanierComponent},
-  {path : 'course', component:ContentListComponent},
+  {path : 'tips', component:ContentListComponent},
   {path : 'add-course', component:AddContentComponent},
 
   {path: 'profil' , component:ProfilComponent},
 
   {path : 'hresultat', component: HresultatComponent},
   {path : 'health', component: HealthComponent},
-  {path: 'sidebar' , component:SidebarComponent},
 
 
-  {path : '', component: HomeComponent},
+  {path : 'home', component: HomeComponent},
+
   {path : 'mental', component: QuestionnaireComponent},
   { path: 'beauty', component: BeautyComponent},
   {path : 'promotion', component: PromotionComponent},
+  { path: 'login', component: LoginComponent },
 
-  {path : 'add-produit', component: AddNewProductComponent},
-  
-
+  {path : 'admin', component: AddNewProductComponent},
   {path : 'storemental', component: StoreComponent},
+  {path : 'about', component: AboutComponent},
+
   {path : 'rendezvous', component: RendezvousComponent},
 
   {path : 'storebeauty', component: StorebeautyComponent},
@@ -54,9 +54,8 @@ const routes: Routes = [
 
   {path : 'healthstore', component: StorehealthComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'hoom', component: AccccComponent},
 
-  {path: 'login', component: LoginComponent}
+  {path: '', component: LoginComponent}
  
 ];
 

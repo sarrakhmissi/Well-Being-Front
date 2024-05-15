@@ -1,4 +1,3 @@
-// service-panier.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({

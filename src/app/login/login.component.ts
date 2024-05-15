@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,19 +10,18 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username: string = '';
   password: string = '';
-  errorMessage: string = ''; // Message d'erreur
+  isConnected: boolean = false;
+  errorMessage: string = ''; 
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   login() {
     const user = { username: this.username, password: this.password };
-    this.http.post<any>('http://localhost:8080/api/login', user).subscribe(response => {
-      // Handle successful login response here
+    this.loginService.login(user).subscribe(response => {
       console.log(response);
-      // Naviguer vers la page de tableau de bord après la connexion réussie
-      this.router.navigate(['/profil']);
+      this.isConnected = true;
+      this.router.navigate(['/home']);
     }, error => {
-      // Handle login error here
       console.error(error);
       this.errorMessage = 'Votre email ou mot de passe est incorrect.';
     });

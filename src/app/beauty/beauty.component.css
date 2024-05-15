@@ -1,4 +1,99 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: zapf chancery, serif;
+  margin-bottom: 0;
+
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; /* Couleur de fond de la navbar */
+}
+
+.logo img {
+  height: 100px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons .btn {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #0fc0df;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.buttons .btn:hover {
+  background-color: #e8edee;
+}
+
+.dropdown .btn {
+  color: #0fc0df;
+  background-color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.buttons.left {
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.buttons.left:hover {
+  transform: translateY(-5px);
+}
+
+.buttons.right {
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.buttons.right:hover {
+  transform: translateY(-5px);
+}
+
 body{
   background-color: white;
     background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le formulaire */

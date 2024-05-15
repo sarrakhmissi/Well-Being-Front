@@ -1,21 +1,80 @@
-
-<div class="login-container">
-    
-    <form (ngSubmit)="login()">
-        <img style="width: 150px; margin-left: 50px;" src="https://img.freepik.com/vecteurs-premium/icone-utilisateur_6091-78.jpg" alt="">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Choose a username" [(ngModel)]="username" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Enter your password" required>
-        </div>
-        <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div> <!-- Ajout de la zone pour afficher le message d'erreur -->
-        <button type="submit">Login</button>
-    </form>
-    <div class="register-link">
-        Don't have an account? <a href="register">Register</a>
+<nav class="navbar">
+    <div class="logo">
+        <a href="#"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438115829_1145633666473696_1716989493358583312_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DYyMpj3RQswQ7kNvgGJ_bBk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QH5kawcjNbDbtSFYQrfXtvCelx9r2L1AF4y56Z2rRE3mQ&oe=66699B3C" alt="Logo"></a>
     </div>
-  </div>
+    <div>
+        
+    </div>
+    <div class="buttons left">
+        <a href="" class="btn">Home</a>
+      
+            <button class="btn" >Quiz</button>
+           
+       
+        <div class="dropdown">
+            <button class="btn">Shop</button>
+           
+        </div>
+        <a href="" class="btn">Tips for better lifestyle </a>
+        <a href="" class="btn">Find a Doctor </a>
+        <a href="" class="btn">About us</a>
+
+    </div>
+    
+    <div class="buttons right">
+        <a href="" class="btn">Sign In</a>
+        <a href="" class="btn">Sign Up</a>
+    </div>
+    
+</nav>
+<body>
+        
+    <section class="container">
+        <div class="row">
+<div class="col col-1"></div>
+
+        <div class="col col-5">
+            <div>
+<p>  Subscribe now for a &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+     life-changing experience!</p> 
+</div>      
+<br><br>
+ <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438154332_2504677536406779_3667214104636340740_n.jpg?stp=dst-jpg_p206x206&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QvuMRVgKJkcQ7kNvgHui32y&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QF4LPlaukPDqW245T0faK3qKQGVXAcjjQArMx1iY3dzAA&oe=666980E4" class="image-active" alt="">
+        </div>
+
+        <div class="col col-6">
+
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
+                <h1 class="opacity">login</h1>
+                <form (ngSubmit)="login()">
+                  <div class="form-group">
+                      <label for="username/email">Username/Email:</label>
+                      <input type="text" id="username" name="username" placeholder="Choose a username" [(ngModel)]="username" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div> 
+                  <button type="submit">Login</button>
+              </form>
+              <div class="register-link">
+                  Don't have an account? <a href="register">Register</a>
+              </div>
+  
+  
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </div>
+    
+</div>
+
+    </section>
+  </body>
+  
   

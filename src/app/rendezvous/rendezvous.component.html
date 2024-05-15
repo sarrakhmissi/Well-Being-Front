@@ -1,3 +1,42 @@
+<nav class="navbar">
+  <div class="logo">
+    <a href="#"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438115829_1145633666473696_1716989493358583312_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DYyMpj3RQswQ7kNvgGJ_bBk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QH5kawcjNbDbtSFYQrfXtvCelx9r2L1AF4y56Z2rRE3mQ&oe=66699B3C" alt="Logo"></a>
+  </div>
+  <div>
+      
+  </div>
+  <div class="buttons left">
+      <a href="" class="btn">Home</a>
+      <div class="dropdown" >
+          <button class="btn" >Quiz</button>
+          <div class="dropdown-content">
+              <a href="health" class="btn">Health</a>
+              <a href="mental" class="btn">Mental Health</a>
+              <a href="beauty" class="btn">Beauty</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="btn">Shop</button>
+          <div class="dropdown-content">
+              <a href="healthstore" class="btn">Health</a>
+              <a href="storemental" class="btn">Mental Health</a>
+              <a href="storebeauty" class="btn">Beauty</a>
+              <a href="promotion" class="btn">Promotion</a>
+
+          </div>
+      </div>
+      <a href="course" class="btn">Online Courses </a>
+      <a href="rendezvous" class="btn">Find a Doctor </a>
+      <a href="#section1" class="btn">About us</a>
+
+  </div>
+  
+  <div class="buttons right">
+      <a href="login" class="btn">Sign In</a>
+      <a href="register" class="btn">Sign Up</a>
+  </div>
+  
+</nav>
 <div class="category mental-health">
     <h2>Reservation </h2>
 </div>
@@ -43,59 +82,42 @@
         <div class="modal-overlay" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}" (click)="closeModal()"></div>
         <div class="modal" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}">
             
-                <div class="bordure-2">
-                    <div class="container-2">
-                       
-                    
-                        <div class="form-container-2 .original-box-shadow">
-                            <form >
-                                <h2 style="color: rgb(20, 20, 27);">Reserve a meeting with a doctor</h2><br>
-                                <div class="form-group-2">
-                                  <label for="firstname">First Name:</label>
-                                  <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
-                                </div>
-                            
-                                <div class="form-group-2">
-                                  <label for="lastname">Last Name:</label>
-                                  <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
-                                </div>
-                            
-                                
-                            
-                               
-                             
-                                <div class="form-group-2">
-                                  <label for="dob">Date of Birth:</label>
-                                  <input type="date" id="dob" name="dob" placeholder="Select your date of birth" required>
-                                </div>
-                            
-                                <div class="form-group-2">
-                                  <label for="phone">Phone:</label>
-                                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                                </div>
-                            
-                                <div class="form-group-2">
-                                  <label for="gender">Gender:</label>
-                                  <select id="gender" name="gender" required>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                  </select>
-                                </div>
-                            
-                               
-                            
-                                <button type="submit" (click)="closeModal()">Reserve</button>
-                               
-                              
-                               
-                              </form>
-                        </div>
-                       
-                      
-                      </div>
-                      
-                      </div>
+          <div class="bordure-2">
+            <div class="container-2">
+              <div class="form-container-2 .original-box-shadow">
+                <form (ngSubmit)="submitReservation()">
+                  <h2 style="color: rgb(20, 20, 27);">Reserve a meeting with a doctor</h2><br>
+                  <div class="form-group-2">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required [(ngModel)]="reservation.nom">
+                  </div>
+                  <div class="form-group-2">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required [(ngModel)]="reservation.prenom">
+                  </div>
+                  <div class="form-group-2">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" placeholder="Select your date of birth" required [(ngModel)]="reservation.dateN">
+                  </div>
+                  <div class="form-group-2">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required [(ngModel)]="reservation.numTel">
+                  </div>
+                  <div class="form-group-2">
+                    <label>Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="male" [(ngModel)]="reservation.gender">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female" [(ngModel)]="reservation.gender">
+                    <label for="female">Female</label><br>
+                  </div>
+                  
+                  <button type="submit">Reserve</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          
                 
             
         </div>
+      

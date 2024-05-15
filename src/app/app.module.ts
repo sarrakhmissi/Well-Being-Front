@@ -23,12 +23,11 @@ import { PanierComponent } from './panier/panier.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AddContentComponent } from './add-content/add-content.component';
 import { ContentListComponent } from './content-list/content-list.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { StorehealthComponent } from './storehealth/storehealth.component';
 import { StorebeautyComponent } from './storebeauty/storebeauty.component';
-import { AccccComponent } from './acccc/acccc.component';
 import { RendezvousComponent } from './rendezvous/rendezvous.component';
 import { ReservedComponent } from './reserved/reserved.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -51,12 +50,11 @@ import { ReservedComponent } from './reserved/reserved.component';
     ProfilComponent,
     AddContentComponent,
     ContentListComponent,
-    SidebarComponent,
     StorehealthComponent,
     StorebeautyComponent,
-    AccccComponent,
     RendezvousComponent,
     ReservedComponent,
+    AboutComponent,
    
   
    
@@ -73,4 +71,6 @@ import { ReservedComponent } from './reserved/reserved.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

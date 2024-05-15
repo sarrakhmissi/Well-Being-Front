@@ -1,67 +1,64 @@
-<body>
-
-  <main>
-    <div class="footer-container">
-      <div class="contact">
-        <h3> ☎ +216 33 33 33 33 &nbsp;&nbsp;&nbsp; &nbsp; ✉ wellbeing@gmail.com </h3>
-
-        <div class="social-media">
-          <h3></h3>
-          <ul>
-            Follow us &nbsp;&nbsp;&nbsp;&nbsp;<a
-              href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR">
-              <img src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg" alt="Facebook"
-                style="width: 50px; height: 50px;">
-            </a>
-
-
-            <a href="https://www.instagram.com/votrecompte">
-              <img
-                src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
-                alt="Intagram" style="width: 50px; height: 50px;">
-            </a>
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-            <a>
-
-
-
-
-              <ul class="cart">
-                <li class="cart-item" *ngFor="let item of items; let i = index">
-                  {{ item.name }} : {{ item.price }} DT |
-                  <button class="remove-button" (click)="supprimerProduitsDuPanier(i)">
-                    <h3>—</h3>
-                  </button>
-                </li>
-              </ul>
-              <div *ngIf="items.length === 0" class="empty-cart-message">
-                Your cart is empty.
-              </div>
-              Total : <span class="cart-total">{{ calculerTotal() }} DT</span>
-              <button class="clear-cart-button" (click)="viderPanier()">Clear Cart</button>
-
-
-
-
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC_Oy3WGKKIf3MnnEugk43GN0wT5paNsDbvQ&usqp=CAU"
-                alt="panier" style="width: 50px; height: 50px;">
-            </a>
-
-          </ul>
-        </div>
+<nav class="navbar">
+  <div class="logo">
+    <a href="#"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438115829_1145633666473696_1716989493358583312_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DYyMpj3RQswQ7kNvgGJ_bBk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QH5kawcjNbDbtSFYQrfXtvCelx9r2L1AF4y56Z2rRE3mQ&oe=66699B3C" alt="Logo"></a>
+  </div>
+  <div>
+      
+  </div>
+  <div class="buttons left">
+      <a href="" class="btn">Home</a>
+      <div class="dropdown" >
+          <button class="btn" >Quiz</button>
+          <div class="dropdown-content">
+              <a href="health" class="btn">Health</a>
+              <a href="mental" class="btn">Mental Health</a>
+              <a href="beauty" class="btn">Beauty</a>
+          </div>
       </div>
-    </div>
+      <div class="dropdown">
+          <button class="btn">Shop</button>
+          <div class="dropdown-content">
+              <a href="healthstore" class="btn">Health</a>
+              <a href="storemental" class="btn">Mental Health</a>
+              <a href="storebeauty" class="btn">Beauty</a>
+              <a href="promotion" class="btn">Promotion</a>
 
-  </main>
+          </div>
+      </div>
+      <a href="course" class="btn">Online Courses </a>
+      <a href="rendezvous" class="btn">Find a Doctor </a>
+      <a href="#section1" class="btn">About us</a>
 
+  </div>
+  
+  <div class="buttons right">
+      <a href="login" class="btn">Sign In</a>
+      <a href="register" class="btn">Sign Up</a>
+  </div>
+  
+</nav>
+<body>
+  <div class="container">
+    <div class="cart-container">
+      <div class="search">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search products by name" (keyup.enter)="searchProducts()">
+        <button (click)="searchProducts()">Search</button>
+      </div>
+      <ul class="cart">
+        <li class="cart-item" *ngFor="let item of items; let i = index">
+           {{ item.price }} DT |
+          <button class="remove-button" (click)="supprimerProduitsDuPanier(i)">Remove</button>
+        </li>
+      </ul>
+      <div *ngIf="items.length === 0" class="empty-cart-message"></div>
+      <div>Total : <span class="cart-total">{{ calculerTotal() }} DT</span></div>
+      <button class="clear-cart-button" (click)="viderPanier()">Clear Cart</button>
+      <a [routerLink]="['/panier']">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC_Oy3WGKKIf3MnnEugk43GN0wT5paNsDbvQ&usqp=CAU" alt="panier" style="width: 50px; height: 50px;">
+      </a>
+        </div>
+ 
+  </div>
   <main>
     <section class="hero">
       <h1>🌟 Limited Time Offer: Get Your Favorites Now! 🌟<br></h1>
@@ -82,53 +79,29 @@
 
 
 
-          <a href="section1">See all offers</a>
+          <a href="promotion">See all offers</a>
         </div>
 
       </section>
       <br><br><br><br>
 
       <h1>Happy shopping! 🛒✨</h1> <br>
-      <div class="search"><input type="text" [(ngModel)]="searchTerm" placeholder="Search products by name" (keyup.enter)="searchProducts()">
-        <button (click)="searchProducts()">Search</button>
-        </div>
-      <h2 > products</h2>
-      <section class="featured-products">
-        <div class="product" *ngFor="let product of products">
-          <img [src]="product.imageUrl" alt="{{ product.name }} " />
-          <h2>{{ product.name }}</h2>
-          <p>Prix: {{ product.price }} TND</p>
-
-          <button (click)="ajouterProduitAuPanier(product)" >Ajouter au panier</button>
-
-        </div>
-      </section>
+     
+     
     </section>
 
 
-    
-     
+ 
+    <section class="featured-products">
+      <div class="product" *ngFor="let product of products">
+        <img [src]="product.imageUrl" alt="{{ product.name }} " />
+        <h2>{{ product.name }}</h2>
+        <p>Prix: {{ product.price }} TND</p>
+        <button (click)="ajouterProduitAuPanier(product)" >Ajouter au panier</button>
+
+      </div>
+    </section>
 
   </main>
+  </body>
 
-</body>
-<footer>
-  <div class="footer-container">
-    <div class="contact">
-      <h3>Contact</h3>
-      <h5>Email: contactexample.com</h5>
-      <h5>Téléphone: +123456789</h5>
-    </div>
-    <div class="social-media">
-      <h3>Suivez-nous</h3>
-      <ul>
-        <li><a href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR"><img
-              src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg" alt="Facebook"></a></li>
-        <li><a href="https://www.instagram.com/votrecompte"><img
-              src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
-              alt="Instagram"></a></li>
-      </ul>
-    </div>
-  </div>
-
-</footer>

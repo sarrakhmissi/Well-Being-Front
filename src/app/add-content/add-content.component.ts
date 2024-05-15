@@ -8,8 +8,8 @@ import { Video } from '../models/video.model';
 })
 export class AddContentComponent {
   
-  videoTitle: string = ''; // Initialisation avec une chaîne vide
-  videoDescription: string = ''; // Initialisation avec une chaîne vide
+  videoTitle: string = ''; 
+  videoDescription: string = ''; 
   videoUrl: string = ''; 
   videos: Video[] = [];
   video: any = {};
@@ -26,7 +26,6 @@ export class AddContentComponent {
     this.http.post<any>('http://localhost:8080/api/video/add', video).subscribe(
       response => {
         console.log('Video added successfully:', response);
-        // Clear video form fields after successful submission
         this.videoTitle = '';
         this.videoDescription = '';
         this.videoUrl = '';
@@ -51,10 +50,9 @@ export class AddContentComponent {
       this.http.delete<any>('http://localhost:8080/api/video/delete/' + videoId).subscribe(
         () => {
           console.log(`Video with ID ${videoId} deleted successfully.`);
-          // Rafraîchir la liste des vidéos après la suppression
           this.fetchVideos();
         },
-        (error: any) => { // Spécifiez le type d'erreur
+        (error: any) => { 
           console.error(`Error deleting video with ID ${videoId}:`, error);
         }
       );

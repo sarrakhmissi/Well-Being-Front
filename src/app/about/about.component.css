@@ -1,0 +1,12 @@
+.photo-with-paragraph {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Alignement vertical des éléments */
+    margin-bottom: 20px; /* Espacement entre chaque paire image/texte */
+  
+  }
+  
+  .photo-with-paragraph img {
+    max-width: 50%; /* Largeur maximale de l'image pour occuper la moitié de la largeur */
+    margin-left: 30px; /* Espacement entre l'image et le texte */
+    width: 400px;
+  }

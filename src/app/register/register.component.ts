@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-register',
@@ -11,32 +12,26 @@ export class RegisterComponent {
   username: string = '';
   password: string = '';
   email: string = '';
-  
+  firstname : string = '';
+  lastname : string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   register() {
-    const user = { username: this.username, password: this.password , email: this.email };
-    this.http.post<any>('http://localhost:8080/api/register', user).subscribe(response => {
-      // Handle successful registration response here
+    const user = { username: this.username, password: this.password , email: this.email, firstname: this.firstname, lastname: this.lastname };
+    this.loginService.register(user).subscribe(response => {
       console.log(response);
-      // Call sendEmail function after successful registration
-      this.sendEmail(this.email);
+      this.router.navigate(['/login']);
     }, error => {
-      // Handle registration error here
       console.error(error);
     });
   }
 
   sendEmail(email: string) {
-    // Call your backend endpoint to send email
-    this.http.post<any>('http://localhost:8080/api/mail/sendEmail', { toEmail: email }).subscribe(response => {
-      // Handle successful email sending response here
+    this.loginService.sendEmail(email).subscribe(response => {
       console.log(response);
     }, error => {
-      // Handle email sending error here
       console.error(error);
     });
-  }
-  
+  }  
 }

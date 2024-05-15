@@ -1,40 +1,60 @@
-.panier {
-    background-color: #f8f9fa; /* Background color */
-    padding: 20px; /* Padding for spacing */
-    border-radius: 10px; /* Rounded corners */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.panier h2 {
-    margin-top: 0; /* Remove default margin from the top of h2 */
-    font-size: 24px; /* Adjust font size */
-    color: #333; /* Text color */
+.checkout-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.panier ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
+h2 {
+    text-align: center;
 }
 
-.panier li {
-    margin-bottom: 10px; /* Spacing between list items */
-    font-size: 16px; /* Adjust font size */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.panier button {
-    background-color: transparent; /* Transparent background */
-    border: none; /* Remove border */
-    cursor: pointer; /* Show pointer cursor on hover */
+label {
+    margin-top: 10px;
 }
 
-.panier button:hover {
-    color: red; /* Change text color on hover */
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.panier div {
-    margin-top: 10px; /* Spacing */
-    font-size: 18px; /* Adjust font size */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.panier button:last-child {
-    margin-top: 20px; /* Add space above the last button */
+button:hover {
+    background-color: #0056b3;
+}
+
+.total-price {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.total-price p, .total-price h3 {
+    margin: 5px 0;
 }

@@ -17,7 +17,7 @@ export class BeautyComponent implements OnInit{
     { id: 2, text: 'Are you diligent about removing makeup before going to bed?', answer: '',
     advice:"Leaving makeup on overnight can clog pores and lead to breakouts.",beautyImage:"https://www.elementre-solutions.com/cdn/shop/files/7A7A8543.jpg?v=1689898011&width=1445" },
     { id: 3, text: ' Do you use sunscreen with SPF 30 or higher every day, even on cloudy days?', answer: '' , 
-    advice:"Sunscreen helps protect against UV damage and premature aging.",beautyImage:"https://princesscosmeticsqa.com/cdn/shop/files/image_e302cf3d-1311-4ad6-824f-14e25c2fccf0.jpg?v=1685483560"},
+    advice:"Using sunscreen is crucial for skin protection! Sunscreen helps shield against UV damage and premature aging. Consider choosing a Neutrogena sunscreen that matches your skin type and preferences. Make it a habit to apply it regularly to safeguard your skin from the sun's harmful rays.",beautyImage:"https://princesscosmeticsqa.com/cdn/shop/files/image_e302cf3d-1311-4ad6-824f-14e25c2fccf0.jpg?v=1685483560"},
     { id: 4, text: 'Do you drink at least 8 glasses of water per day?', answer: '',
     advice:"Proper hydration is essential for maintaining healthy skin.",beautyImage:"https://m.media-amazon.com/images/I/71Wec9b3eXL._SL1500_.jpg" },
     { id: 5, text: 'Do you eat a balanced diet with plenty of fruits and vegetables?', answer: '' , 
@@ -42,7 +42,6 @@ export class BeautyComponent implements OnInit{
   constructor(private questionnaireService: QuestionnaireService, private router: Router) { }
 
   ngOnInit(): void {
-    //this.questions = this.questionnaireService.getQuestions();
   }
 
   submitForm() {
@@ -55,7 +54,6 @@ export class BeautyComponent implements OnInit{
       this.currentQuestionIndex++;
     }
   }
-  // Méthode pour mettre à jour la réponse d'une question
   updateAnswer(bquestion: Bquestion, answer: boolean): void {
     bquestion.answer = answer;
   }

@@ -29,7 +29,6 @@ export class HealthComponent implements OnInit{
   constructor(private questionnaireService: QuestionnaireService, private router: Router) { }
 
   ngOnInit(): void {
-    //this.questions = this.questionnaireService.getQuestions();
   }
 
   submitForm() {
@@ -43,7 +42,6 @@ export class HealthComponent implements OnInit{
   }
 
 
-  // Méthode pour mettre à jour la réponse d'une question
   updateAnswer(hquestion: Hquestion, answer: boolean): void {
     hquestion.answer = answer;
   }

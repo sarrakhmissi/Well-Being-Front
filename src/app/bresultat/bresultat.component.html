@@ -1,61 +1,73 @@
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="#"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438115829_1145633666473696_1716989493358583312_n.png?stp=dst-png_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DYyMpj3RQswQ7kNvgGJ_bBk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QH5kawcjNbDbtSFYQrfXtvCelx9r2L1AF4y56Z2rRE3mQ&oe=66699B3C" alt="Logo" class="logo"></a>
+  </div>
+  <div>
+      
+  </div>
+  <div class="buttons left">
+      <a href="home" class="btn">Home</a>
+      <div class="dropdown" >
+          <button class="btn" >Quiz</button>
+          <div class="dropdown-content">
+              <a href="health" class="btn">Health</a>
+              <a href="mental" class="btn">Mental Health</a>
+              <a href="beauty" class="btn">Beauty</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="btn">Shop</button>
+          <div class="dropdown-content">
+              <a href="healthstore" class="btn">Health</a>
+              <a href="storemental" class="btn">Mental Health</a>
+              <a href="storebeauty" class="btn">Beauty</a>
+              <a href="promotion" class="btn">Promotion</a>
+
+          </div>
+      </div>
+      <a href="tips" class="btn">Tips for better lifestyle </a>
+      <a href="rendezvous" class="btn">Find a Doctor </a>
+      <a href="about" class="btn">About us</a>
+
+  </div>
+  
+  <div class="buttons right">
+      <a href="login" class="btn">Sign In</a>
+      <a href="register" class="btn">Sign Up</a>
+  </div>
+  
+</nav>
+<div class="category mental-health">
+  <h2 > Quiz Results </h2>
+</div>
 <body>
+  <div class="result-container">
+    <br>
+    
 
-
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <h1>Résultats ☺</h1>
-    <br><br>
     <div *ngIf="yesAnswers.length > 0">
-      <h3>Hello, you have completed the Quiz 👏</h3>
-      <br><br>
+      <h3> You have completed the Quiz 👏</h3> 
+   
+     
+      <br>
+      <div *ngIf="yesAnswers.length === 0">
+        <p >Beauty = 100%</p>
+      </div>
+      <div *ngIf="yesAnswers.length > 11">
+        <p style="font-family: Bookman, URW Bookman L, serif; font-size: 30px; color: rgb(78, 117, 117);">Beauty = 40%</p>
+      </div>
       <ul>
         <li *ngFor="let answer of yesAnswers">
-          <strong>
-            &nbsp;&nbsp; ☺&nbsp;&nbsp;&nbsp;&nbsp;{{ answer.advice }}<br><br><br></strong>
-            <a href="store" >
-              <img [src]="answer.beautyImage" style="width: 300px; height: auto;">
-            </a>
+          <strong>{{ answer.advice }}</strong><br>
+          <a href="storebeauty">
+            <img [src]="answer.beautyImage" alt="Beauty Product">
+          </a>
         </li>
       </ul>
     </div>
-    <br><br><br>
-    <div *ngIf="yesAnswers.length === 0">
-      <p>Beauty</p>
-    </div>
-    <div *ngIf="yesAnswers.length >11">
-      <p>Your mental well-being is in a negativ</p>
-    </div>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br><br><br>
-    <br><br>
-    <br><br>
-    <br><br><br><br>
-    <br><br>
-    <br><br>
-    <br><br>
+    
+  </div>
+    
   </body>
-  <footer>
-    <div class="footer-container">
-        <div class="contact">
-            <h3>Contact</h3>
-            <h5>Email: contactexample.com</h5>
-            <h5>Téléphone: +123456789</h5>
-        </div>
-        <div class="social-media">
-            <h3>Suivez-nous</h3>
-            <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=100035186080849&locale=fr_FR"><img
-                            src="https://img.freepik.com/vecteurs-premium/icone-facebook_488108-2.jpg"
-                            alt="Facebook"></a></li>
-                <li><a href="https://www.instagram.com/votrecompte"><img
-                            src="https://img.freepik.com/premium-vector/modern-logo-instagram-icon-white-background_578229-126.jpg"
-                            alt="Instagram"></a></li>
-            </ul>
-        </div>
-    </div>
-
-</footer>
+ 

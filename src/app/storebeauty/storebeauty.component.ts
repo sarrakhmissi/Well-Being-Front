@@ -71,4 +71,5 @@ export class StorebeautyComponent {
     }
     return total;
   }
+  
 }

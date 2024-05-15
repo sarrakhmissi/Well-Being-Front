@@ -1,14 +1,19 @@
-<div class="panier">
-    <h2>Votre Panier</h2>
-    <ul>
-      <li *ngFor="let item of items; let i = index">
-        {{ item.name }} - {{ item.price }} €
-        <button (click)="supprimerProduitsDuPanier(i)"><h3 style="color: red;">—</h3></button>
-      </li>
-    </ul>
-    <div *ngIf="items.length === 0">
-      Votre panier est vide.
-    </div>
-    <div>Total : {{ calculerTotal() }} €</div>
-    <button (click)="viderPanier()">Vider le panier</button>
-    </div>
+<body>
+  <div class="checkout-container">
+      <h2>Checkout</h2>
+      <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" rows="4" required></textarea>
+          <div class="total-price">
+              <p>Total Price: 100 DT</p>
+              <p>Shipping: 8 DT</p>
+              <h3>Total Amount: 108 DT</h3>
+          </div>
+          <button type="submit">Place Order</button>
+      </form>
+  </div>
+</body>

@@ -23,7 +23,6 @@ export class HealthproductService {
 
   constructor(private http: HttpClient) { } 
 
-  // POST request to add a product
   addhealthproduct(healthproduct: Healthproduct): Observable<any> {
     return this.http.post(this.API_URL+this.ENDPOINT_ADDMENTALPRODUCTS,healthproduct);
   }
@@ -38,7 +37,6 @@ export class HealthproductService {
 
 
 
- //delete
  deleteHealthProduct(id: number): Observable<any> {
   return this.http.delete(`${this.API_URL}/api/productMental/delete/${id}`);
 }

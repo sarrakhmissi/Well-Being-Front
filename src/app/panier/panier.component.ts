@@ -35,18 +35,18 @@ ajouterProduitAuPanier(product: any) {
   }
   
 
-  items: any[] = []; // Déclaration de la propriété items comme un tableau
+  items: any[] = []; 
 
 
   
 
   supprimerProduitsDuPanier(index: number) {
-    this.productservice.supprimerProduitsDuPanier(index); // Appeler la méthode pour supprimer un élément du panier dans le service
+    this.productservice.supprimerProduitsDuPanier(index); 
   }
 
   viderPanier() {
-    this.productservice.viderPanier(); // Appeler la méthode pour vider le panier dans le service
-    this.items = []; // Mettre à jour la liste des articles dans le composant
+    this.productservice.viderPanier();
+    this.items = []; 
   }
 
   calculerTotal() {

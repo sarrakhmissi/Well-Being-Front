@@ -19,7 +19,7 @@ export class ProductService {
   readonly ENDPOINT_PROMOTIONS="/api/promotion/all"
 
 
-  constructor(private http: HttpClient) { } // Inject HttpClient module
+  constructor(private http: HttpClient) { } 
 
   // POST request to add a product
   addproduct(product: Product): Observable<any> {

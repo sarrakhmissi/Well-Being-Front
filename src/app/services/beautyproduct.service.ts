@@ -22,7 +22,6 @@ export class BeautyproductService {
 
   constructor(private http: HttpClient) { } 
 
-  // POST request to add a product
   addbeautyproduct(beautyproduct: Beautyproduct): Observable<any> {
     return this.http.post(this.API_URL+this.ENDPOINT_ADDBEAUTYPRODUCTS,beautyproduct);
   }
@@ -37,7 +36,6 @@ export class BeautyproductService {
 
 
 
- //delete
  deleteBeautyProduct(id: number): Observable<any> {
   return this.http.delete(`${this.API_URL}/api/beautyproduct/delete/${id}`);
 }
